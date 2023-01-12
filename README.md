@@ -12,3 +12,4 @@
 # HELLO VsCode
 # Hello Github1
 # Hello Github2
+# It is so cool to be able to change things on my computer and have them be published to the cloud. I learned how to save, commmit, pull, and resolve conflicts.
