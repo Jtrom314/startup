@@ -22,3 +22,6 @@
 #   * Display choices in dynamic pie chart
 #   * Results are persistently stored
 #   * Ablitiy for admin to create prompts
+# END
+
+# Devin Shelden and Jacob Trader are pair-programming this assignment
