@@ -12,11 +12,19 @@
 # HELLO VsCode
 # Hello Github1
 # Hello Github2
-# It is so cool to be able to change things on my computer and have them be published to the cloud. I learned how to save, commmit, pull, and resolve conflicts.
+# It is so cool to be able to change things on my computer and have 
+# them be published to the cloud. I learned how to save, commmit, 
+# pull, and resolve conflicts.
 
 # ELEVATOR PITCH:
-
-# THIS IS ONLY A TEST PART 3
+# Have you ever wondered what other people thought about something? 
+# Have you ever wanted to know how your opinions stack up against 
+# everyone else's? Well, now you can know! We have created a site
+# called y/n.io that normal people like you and me can vote
+# on several hot-button topcis and see what percentage of people
+# made the same choice! Some opinions will be popular, while other
+# topics will be a controversial 50/50 split! Wheter you are 
+# mainstream or unique, you opinion counts!
 
 #  Key Features:
 #   * Secure login over HTTPS
