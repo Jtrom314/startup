@@ -34,4 +34,4 @@
 #   * Ablitiy for admin to create prompts
 # END
 
-# Devin Shelden and Jacob Trader are pair-programming this assignment.
+# Devin Sheldon and Jacob Trader are pair-programming this assignment.
