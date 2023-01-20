@@ -14,7 +14,7 @@ main {
 
 header {
     flex: 0 80px;
-    background-color: white;
+    background-color: rgb(144, 242, 255);
 }
 
 section:nth-child(odd) {
