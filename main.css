@@ -1,3 +1,33 @@
 body {
     display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+header {
+    flex: 0 80px;
+    background-color: white;
+}
+
+section:nth-child(odd) {
+    flex: 1;
+    background-color: gray;
+}
+
+section:nth-child(2) {
+    flex: 3;
+    background-color: white;
+}
+
+footer {
+    flex: 0 100px;
+    background-color: black;
 }
