@@ -1,14 +1,5 @@
-# startup
 
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-#
-# On branch main
-# Your branch is up to date with 'origin/main'.
-#
-# Changes to be committed :
-#	modified:   README.md
-#
+
 # HELLO VsCode
 # Hello Github1
 # Hello Github2
@@ -18,7 +9,7 @@
 
 # ELEVATOR PITCH:
 # Have you ever wondered what other people thought about something? 
-# Have you ever wanted to know how your opinions stack up against 
+# Have you ever wanted to know how your opinions stack up against git
 # everyone else's? Well, now you can know! We have created a site
 # called y/n.io that normal people like you and me can vote
 # on several hot-button topcis and see what percentage of people
@@ -39,6 +30,9 @@
 #Jacob Trader's Notes on Simon: HTML
 #   While doing this assignment, I thought alot about the meta tag in the head section of the html page
 #   I also found it interesting how you used tables to display infomration. I can't wait to learn how to update them dynamically
+
+#Notes on Simon: CSS
+#   It was cool to see how much the website changed with just a little bit of bootstrap
 
 #Devin Sheldon's Notes on Simon: HTML
 #   
