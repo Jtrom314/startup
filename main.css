@@ -14,6 +14,7 @@ main {
 
 header {
     flex: 0 80px;
+    flex-direction: left;
     background-color: rgb(144, 242, 255);
 }
 
