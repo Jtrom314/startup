@@ -39,3 +39,6 @@
 #Jacob Trader's Notes on Simon: HTML
 #   While doing this assignment, I thought alot about the meta tag in the head section of the html page
 #   I also found it interesting how you used tables to display infomration. I can't wait to learn how to update them dynamically
+
+#Devin Sheldon's Notes on Simon: HTML
+#   
