@@ -14,16 +14,33 @@ main {
 
 header {
     flex: 0 80px;
-    background-color: white;
+    flex-direction: row;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: rgb(144, 242, 255);
+    justify-content: center;
+    align-items: center;
+}
+
+#logoDiv {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
 }
 
 section:nth-child(odd) {
     flex: 1;
-    background-color: gray;
+    background-color: rgb(226, 226, 226);
 }
 
 section:nth-child(2) {
-    flex: 3;
+    flex: 6;
     background-color: white;
 }
 
