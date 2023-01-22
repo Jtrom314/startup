@@ -34,5 +34,8 @@
 #Notes on Simon: CSS
 #   It was cool to see how much the website changed with just a little bit of bootstrap
 
+#Notes on Simon: JS
+#   It was interesting to see asyc in action. I am still a bit hazy on what it does exactly but this gave me a little bit more understanding for what it does
+
 #Devin Sheldon's Notes on Simon: HTML
 #   
