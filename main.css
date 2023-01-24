@@ -1,4 +1,4 @@
-body {
+body {  /* body tag element (EVERYTHING) */
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -22,11 +22,12 @@ header {
     align-items: center;
 }
 
-#logoDiv {
+#logoDiv {  /* id="logoDiv" */
     padding-left: 30px;
     padding-right: 30px;
 }
-.floatLeft {
+
+.floatLeft {    /* class="floatLeft" */
     float: left;
 }
 
