@@ -51,8 +51,47 @@ section:nth-child(2) {
     display: flex;
     justify-content: center;
 }
+.optionWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+.leftBTN {
+    height: 200px;
+    width: 25vw;
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightBTN {
+    height: 200px;
+    width: 25vw;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prompt {
+    
+    display: flex;
+    height: 100px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 footer {
     flex: 0 100px;
     background-color: rgb(100, 100, 100);
+}
+
+@media (screen-width: ) {
+    
 }
