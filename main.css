@@ -105,3 +105,17 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+.progressBarWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progBox{
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+    border-color: rgb(6, 166, 0);
+}
