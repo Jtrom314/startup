@@ -63,6 +63,7 @@ section:nth-child(2) {
 }
 .leftBTN {
     height: 200px;
+    max-width: 400px;
     width: 25vw;
     background-color: green;
     color: white;
@@ -73,6 +74,7 @@ section:nth-child(2) {
 
 .rightBTN {
     height: 200px;
+    max-width: 400px;
     width: 25vw;
     background-color: red;
     color: white;
@@ -104,4 +106,10 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 1200px) {
+    section:nth-child(odd) {
+        flex: 0;
+    }
 }
