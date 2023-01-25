@@ -2,7 +2,7 @@ body {  /* body tag element (EVERYTHING) */
     display: flex;
     flex-direction: column;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     
 }
 
@@ -10,9 +10,7 @@ main {
     flex: 1;
     display: flex;
     flex-direction: row;
-    height: 100vh;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    min-height: 100vh;
 }
 
 header {
@@ -138,4 +136,8 @@ footer {
     section:nth-child(odd) {
         flex: 0;
     }
+}
+
+@media (max-width: 600px) {
+    
 }
