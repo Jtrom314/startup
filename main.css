@@ -3,6 +3,7 @@ body {  /* body tag element (EVERYTHING) */
     flex-direction: column;
     margin: 0;
     height: 100vh;
+    
 }
 
 main {
@@ -10,6 +11,8 @@ main {
     display: flex;
     flex-direction: row;
     height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 header {
@@ -109,8 +112,11 @@ footer {
 }
 
 .progressBarWrapper{
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -119,7 +125,13 @@ footer {
     height: 50px;
     width: 50px;
     background-color: orange;
+    border: solid;
     border-color: rgb(6, 166, 0);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
 }
 
 @media (max-width: 1200px) {
