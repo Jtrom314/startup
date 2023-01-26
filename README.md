@@ -40,5 +40,5 @@ Jacob Trader's Notes on Simon: HTML
 Notes on Simon: Services
   I learned that it is possilble to use outside data not already stored within the files of the project and display it within the website. I can't wait to use this ablitiy within my own website
 
-#Devin Sheldon's Notes on Simon: HTML
-#   
+#Devin Sheldon's Notes
+#   I learned that a good way to avoid merge conflicts is to work on separate files at the same time.
