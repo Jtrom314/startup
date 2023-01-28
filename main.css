@@ -122,6 +122,19 @@ footer {
 .progBox{
     height: 50px;
     width: 50px;
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    border-color: rgb(144, 242, 255);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.highlightedProgBox{
+    height: 50px;
+    width: 50px;
     background-color: orange;
     border: solid;
     border-color: rgb(6, 166, 0);
