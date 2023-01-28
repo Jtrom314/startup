@@ -39,6 +39,10 @@ Jacob Trader's Notes on Simon: HTML
 
 Notes on Simon: Services
   I learned that it is possilble to use outside data not already stored within the files of the project and display it within the website. I can't wait to use this ablitiy within my own website
+ 
+ Notes on Simon: Database
+  I learned that it is important to make sure you set up the database correctly to allow for IP address from anywhere to access it (when that is required)
+    I also learned how objects are stored inside the database and how to use queries to call for data
 
-#Devin Sheldon's Notes on Simon: HTML
-#   
+#Devin Sheldon's Notes
+#   I learned that a good way to avoid merge conflicts is to work on separate files at the same time.
