@@ -131,6 +131,13 @@ footer {
     justify-content: center;
     align-self: center;
 }
+.LeftResponse {
+    color: green;
+}
+
+.RightResponse {
+    color: red;
+}
 
 @media (max-width: 1200px) {
     section:nth-child(odd) {
