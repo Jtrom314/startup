@@ -43,6 +43,13 @@ Notes on Simon: Services
  Notes on Simon: Database
   I learned that it is important to make sure you set up the database correctly to allow for IP address from anywhere to access it (when that is required)
     I also learned how objects are stored inside the database and how to use queries to call for data
+ 
+ Notes on Simon: Log-in
+  I leaned how important it is to make sure all of the approprate npm modules are to installing. I also learned more about what async and await (specifically what they do and don't do) 
+  
+Notes on Simon: Websocket
+I learned what it means to Ping/Pong between the server and client. It was cool to see what that looked like (while debugging it) and what it looked like on the front end of things
+ 
 
 #Devin Sheldon's Notes
 #   I learned that a good way to avoid merge conflicts is to work on separate files at the same time.

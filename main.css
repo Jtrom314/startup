@@ -18,9 +18,10 @@ header {
     flex-direction: row;
     padding-left: 15%;
     padding-right: 15%;
-    background-color: rgb(144, 242, 255);
+    background-color: green;
     justify-content: center;
     align-items: center;
+    color: white
 }
 
 #logoDiv {  /* id="logoDiv" */
@@ -96,7 +97,7 @@ section:nth-child(2) {
 
 footer {
     flex: 0 100px;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(172, 172, 172);
     display: flex;
     justify-content: center;
     align-items: flex-end;
