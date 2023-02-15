@@ -1,3 +1,11 @@
+* {
+  /*modifies everything*/
+}
+
+html {
+  height: 100%;
+}
+
 body {
   /* body tag element (EVERYTHING) */
   display: flex;
@@ -18,10 +26,10 @@ header {
   flex-direction: row;
   padding-left: 15%;
   padding-right: 15%;
-  background-color:rgb(134,207,29);
+  background-color: rgb(134, 207, 29);
   justify-content: center;
   align-items: center;
-  color: white
+  color: white;
 }
 
 #logoDiv {
@@ -155,19 +163,19 @@ footer {
 }
 
 .button {
-    background-color: rgb(134, 207, 29);
-    color: white;
-    border: none;
-    padding: 20px;
-    cursor: pointer;
+  background-color: rgb(134, 207, 29);
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
 }
 
 #userName {
-    background-color: lightgrey;
-    padding-top:20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    border: none
+  background-color: lightgrey;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border: none;
 }
 
 @media (max-width: 1200px) {
