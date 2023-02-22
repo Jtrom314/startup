@@ -47,6 +47,9 @@ Notes on Simon: Services
  Notes on Simon: Log-in
   I leaned how important it is to make sure all of the approprate npm modules are to installing. I also learned more about what async and await (specifically what they do and don't do) 
   
+  Notes on Startup:
+    I learned that it is really good to plan things well in advance if I can. I also learned that it isn't a bad idea to throw in an extra div or two in areas that might need work done in the future (targeting for js, css etc). 
+  
 Notes on Simon: Websocket
 I learned what it means to Ping/Pong between the server and client. It was cool to see what that looked like (while debugging it) and what it looked like on the front end of things
  
