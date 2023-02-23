@@ -32,10 +32,10 @@ function showChicesAndHideResults() {
 
 function showQuestion(questionNumber) {
   activeQuestion = questionNumber;
-  onload();
+  onLoad();
 }
 
 function showNextQuestion() {
   activeQuestion += 1;
-  onload();
+  onLoad();
 }
