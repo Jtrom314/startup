@@ -81,6 +81,7 @@ section:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .rightBTN {
@@ -92,6 +93,7 @@ section:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .prompt {
   display: flex;
