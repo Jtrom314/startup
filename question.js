@@ -1,9 +1,9 @@
 
 let activeQuestion = 1;
 
-document.getElementById(`question${activeQuestion}Wrapper`).style.display = "block";
+//document.getElementById(`question${activeQuestion}Wrapper`).style.display = "block";
 /*"block" means show the block*/
-document.getElementById().style.display = "none";
+//document.getElementById().style.display = "none";
 /*"none" means hide the block*/
 
 function onLoad() {
@@ -39,3 +39,8 @@ function showNextQuestion() {
   activeQuestion += 1;
   onLoad();
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("triggered");
+  onLoad();
+});
