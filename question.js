@@ -1,4 +1,3 @@
-
 let activeQuestion = 1;
 
 //document.getElementById(`question${activeQuestion}Wrapper`).style.display = "block";
@@ -12,10 +11,32 @@ function onLoad() {
   for (let i = 0; i < question.length; i++) {
     if (i != activeQuestion - 1) {
       question[i].style.display = "none";
+      if (
+        document
+          .getElementById(`Q${activeQuestion}`)
+          .classList.contains("highlightedProgBox")
+      ) {
+        document
+          .getElementById(`Q${activeQuestion}`)
+          .classList.remove("highlightedProgBox");
+        document.getElementById(`Q${activeQuestion}`).classList.add("progBox");
+      }
     } else {
       question[i].style.display = "block";
-      let results = document.getElementById(`chart${activeQuestion}Wrapper`)
+      let results = document.getElementById(`chart${activeQuestion}Wrapper`);
       results.style.display = "none";
+      if (
+        document
+          .getElementById(`Q${activeQuestion}`)
+          .classList.contains("progBox")
+      ) {
+        document
+          .getElementById(`Q${activeQuestion}`)
+          .classList.remove("progBox");
+        document
+          .getElementById(`Q${activeQuestion}`)
+          .classList.add("highlightedProgBox");
+      }
     }
   }
 }
@@ -34,7 +55,6 @@ function hideChoicesAndShowResults() {
   results.style.display = "flex";
 }
 
-
 function showQuestion(questionNumber) {
   activeQuestion = questionNumber;
   onLoad();
@@ -45,7 +65,7 @@ function showNextQuestion() {
   onLoad();
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   console.log("triggered");
   onLoad();
 });
