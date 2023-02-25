@@ -11,31 +11,19 @@ function onLoad() {
   for (let i = 0; i < question.length; i++) {
     if (i != activeQuestion - 1) {
       question[i].style.display = "none";
-      if (
-        document
-          .getElementById(`Q${activeQuestion}`)
-          .classList.contains("highlightedProgBox")
-      ) {
-        document
-          .getElementById(`Q${activeQuestion}`)
-          .classList.remove("highlightedProgBox");
-        document.getElementById(`Q${activeQuestion}`).classList.add("progBox");
+      if (document.getElementById(`Q${i + 1}`).classList.contains("highlightedProgBox")) {
+        console.log(`Q${i + i}` + " should get highlites");
+        document.getElementById(`Q${i + 1}`).classList.remove("highlightedProgBox");
+        document.getElementById(`Q${i + 1}`).classList.add("progBox");
       }
     } else {
       question[i].style.display = "block";
       let results = document.getElementById(`chart${activeQuestion}Wrapper`);
       results.style.display = "none";
-      if (
-        document
-          .getElementById(`Q${activeQuestion}`)
-          .classList.contains("progBox")
-      ) {
-        document
-          .getElementById(`Q${activeQuestion}`)
-          .classList.remove("progBox");
-        document
-          .getElementById(`Q${activeQuestion}`)
-          .classList.add("highlightedProgBox");
+      if (document.getElementById(`Q${i + 1}`).classList.contains("progBox")) {
+        console.log(`Q${i + 1}` + " Should get highlighted");
+        document.getElementById(`Q${i + 1}`).classList.remove("progBox");
+        document.getElementById(`Q${i + 1}`).classList.add("highlightedProgBox");
       }
     }
   }
