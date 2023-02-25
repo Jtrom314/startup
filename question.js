@@ -6,18 +6,18 @@ let activeQuestion = 1;
 /*"none" means hide the block*/
 
 function onLoad() {
-  let question = document.getElementsByClassName(`questionWrap`);
+  let questions = document.getElementsByClassName(`questionWrap`);
   //get all the elements with class name "questionWrap"
-  for (let i = 0; i < question.length; i++) {
+  for (let i = 0; i < questions.length; i++) {
     if (i != activeQuestion - 1) {
-      question[i].style.display = "none";
+      questions[i].style.display = "none";
       if (document.getElementById(`Q${i + 1}`).classList.contains("highlightedProgBox")) {
-        console.log(`Q${i + i}` + " should get highlites");
+        console.log(`Q${i + 1}` + " should get highlites");
         document.getElementById(`Q${i + 1}`).classList.remove("highlightedProgBox");
         document.getElementById(`Q${i + 1}`).classList.add("progBox");
       }
     } else {
-      question[i].style.display = "block";
+      questions[i].style.display = "block";
       let results = document.getElementById(`chart${activeQuestion}Wrapper`);
       results.style.display = "none";
       if (document.getElementById(`Q${i + 1}`).classList.contains("progBox")) {
@@ -28,6 +28,10 @@ function onLoad() {
     }
   }
 }
+
+function updateProgBoxes() {}
+
+function updateQuestionShown() {}
 
 function recordResponse(response) {
   console.log(response);
