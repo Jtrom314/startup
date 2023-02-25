@@ -7,28 +7,33 @@ let activeQuestion = 1;
 /*"none" means hide the block*/
 
 function onLoad() {
-  let prompts = document.getElementsByClassName(`questionWrap`);
+  let question = document.getElementsByClassName(`questionWrap`);
   //get all the elements with class name "questionWrap"
-  for (let i = 0; i < prompts.length; i++) {
+  for (let i = 0; i < question.length; i++) {
     if (i != activeQuestion - 1) {
-      prompts[i].style.display = "none";
+      question[i].style.display = "none";
     } else {
-      prompts[i].style.display = "block";
+      question[i].style.display = "block";
+      let results = document.getElementById(`chart${activeQuestion}Wrapper`)
+      results.style.display = "none";
     }
   }
 }
 
-function hideChoicesAndShowResults() {
-  document.getElementById(`question${activeQuestion}`).style.display = "block";
-  document.getElementById(`choices${activeQuestion}`).style.display = "none";
-  document.getElementById(`results${activeQuestion}`).style.display = "block";
+function recordResponse(response) {
+  console.log(response);
+  //send repsone to database
+  //retrieve information form database
+  hideChoicesAndShowResults();
 }
 
-function showChicesAndHideResults() {
-  document.getElementById(`question${activeQuestion}`).style.display = "block";
-  document.getElementById(`choices${activeQuestion}`).style.display = "block";
-  document.getElementById(`results${activeQuestion}`).style.display = "none";
+function hideChoicesAndShowResults() {
+  let question = document.getElementById(`optionWrapper${activeQuestion}`);
+  let results = document.getElementById(`chart${activeQuestion}Wrapper`);
+  question.style.display = "none";
+  results.style.display = "flex";
 }
+
 
 function showQuestion(questionNumber) {
   activeQuestion = questionNumber;
