@@ -1,4 +1,23 @@
 let activeQuestion = 1;
+const questionData = [
+  { questionNumber: 1,
+    leftResponses: 10,
+    rightResponses: 10,
+    totalRepsonses: 20
+  },
+  {
+    questionNumber: 2,
+    leftResponses: 15,
+    rightResponses: 5,
+    totalRepsonses: 20
+  },
+  {
+    questionNumber: 3,
+    leftResponses: 4,
+    rightResponses: 16,
+    totalRepsonses: 20
+  }
+];
 
 //document.getElementById(`question${activeQuestion}Wrapper`).style.display = "block";
 /*"block" means show the block*/
@@ -12,7 +31,6 @@ function onLoad() {
     if (i != activeQuestion - 1) {
       question[i].style.display = "none";
       if (document.getElementById(`Q${i + 1}`).classList.contains("highlightedProgBox")) {
-        console.log(`Q${i + i}` + " should get highlites");
         document.getElementById(`Q${i + 1}`).classList.remove("highlightedProgBox");
         document.getElementById(`Q${i + 1}`).classList.add("progBox");
       }
@@ -21,7 +39,6 @@ function onLoad() {
       let results = document.getElementById(`chart${activeQuestion}Wrapper`);
       results.style.display = "none";
       if (document.getElementById(`Q${i + 1}`).classList.contains("progBox")) {
-        console.log(`Q${i + 1}` + " Should get highlighted");
         document.getElementById(`Q${i + 1}`).classList.remove("progBox");
         document.getElementById(`Q${i + 1}`).classList.add("highlightedProgBox");
       }
@@ -33,6 +50,8 @@ function recordResponse(response) {
   console.log(response);
   //send repsone to database
   //retrieve information form database
+  //set Data
+  setData();
   hideChoicesAndShowResults();
 }
 
@@ -57,3 +76,20 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("triggered");
   onLoad();
 });
+
+
+function setData() {
+  const leftResponseHTML = document.getElementById(`left${activeQuestion}Response`);
+  const rightResponseHTML = document.getElementById(`right${activeQuestion}Response`);
+  let leftNum = 0;
+  let rightNum = 0;
+  for (let i = 0; i < questionData.length; i++) {
+    if (questionData[i].questionNumber === activeQuestion) {
+      leftNum = (questionData[i].leftResponses / questionData[i].totalRepsonses) * 100;
+      rightNum = (questionData[i].rightResponses / questionData[i].totalRepsonses) * 100;
+      break;
+    }
+  }
+  leftResponseHTML.innerText = leftNum + "%";
+  rightResponseHTML.innerText = rightNum + "%";
+}
