@@ -23,7 +23,7 @@ async function getResponsesFromService() {
   let questionDataToFill = [];
   try {
     const response = await fetch('/api/responses');
-    questionDataToFill = response.json();
+    questionDataToFill = await response.json();
     localStorage.setItem('UserReponses', questionDataToFill);
   } catch {
     const getLocalData = localStorage.getItem('UserResponses');
