@@ -37,6 +37,9 @@ Jacob Trader's Notes on Simon: HTML
 #Notes on Simon: JS
 #   It was interesting to see asyc in action. I am still a bit hazy on what it does exactly but this gave me a little bit more understanding for what it does
 
+Notes on Startup JS:
+Had a fun time working with objects and async functions. It was fun trying to figure out a solution to storing user response locally in a way that made sense to me while also looking out for what is to come in the future with data bases and other services.
+
 Notes on Simon: Services
   I learned that it is possilble to use outside data not already stored within the files of the project and display it within the website. I can't wait to use this ablitiy within my own website
  
