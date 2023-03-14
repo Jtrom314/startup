@@ -14,7 +14,7 @@
       rel="icon"
       href="https://play-lh.googleusercontent.com/HnrIhQ3OLrboERhy6D-olqjQpZQLJYyW9Qz4MXvFcr87qGh91r5gJas2OuoYGJjmA26L=w240-h480-rw"
     />
-    <script src="login.js"></script>
+    <script src="login.js" defer></script>
   </head>
 
   <body>
@@ -37,9 +37,20 @@
       <section></section>
       <section>
         <div style="text-align: center">
+          <div id="loginControls" style="display: block">
           <h3>Log in to vote!</h3>
           <input id="userName" type="text" placeholder="Username" />
-          <button class="button" onclick="login()">Log in</button>
+          <input id="passWord" type="password" placeholder="Password" />
+          <div>
+            <button type="button" class="button" onclick="loginUser()">Login</button>
+            <button type="button" class="button red" onclick="createUser()">Create</button>
+          </div>
+          </div>
+          <div id="voteControls" style="display: none">
+            <div id="playerName"></div>
+            <button type="button" class="button" onclick="vote()">Vote</button>
+            <button type="button" class="button red" onclick="logout()">Logout</button>
+          </div>
         </div>
       </section>
       <section></section>
