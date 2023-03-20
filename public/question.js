@@ -34,7 +34,7 @@ socket.onclose = (event) => {
 
 function displayMessage( cls, from , msg) {
   const chatText = document.querySelector('#player-messages')
-  chatText.innerHTML = `<div>${msg}</div>` + chatText.innerHTML;
+  chatText.innerHTML = `<div class="msg">${msg}</div>` + chatText.innerHTML;
 }
 
 let activeQuestion = 1;

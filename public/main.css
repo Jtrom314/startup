@@ -192,3 +192,7 @@ input {
 
 @media (max-width: 600px) {
 }
+
+.msg {
+  padding: 20px;
+}
