@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const cookieParser = require('cookie-parser');
 const app = express();
 const DB = require('./database.js');
+const { PeerProxy } = require('./peerProxy.js')
 
 const authCookieName ='token';
 
@@ -68,9 +69,7 @@ apiRouter.get('/user/:email', async (req, res) => {
 apiRouter.get('/auth/getAll', (req, res) => {
     console.log("I'm here");
     const allPeoples = DB.returnAllUsers();
-    allPeoples.forEach(element => {
-        console.log(element);
-    });
+    console.log(allPeoples);
 })
 
 
@@ -123,6 +122,8 @@ function setAuthCookie(res, authToken) {
 
 
 //Listen should always be last (can't listen for the things that are below this! MAS IMPORTANTE)
-app.listen(port, () => {
+const httpService = app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 })
+
+new PeerProxy(httpService)

@@ -1,3 +1,42 @@
+const QuestionEventBegin = 'started answering questions'
+const QuestionEventEnd = 'answered last question'
+const userName = localStorage.getItem('userName')
+const maxNumberOfQuestions = 3;
+const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss'
+const socket = new WebSocket(`${protocol}://${window.location.host}/ws`)
+
+socket.onopen = (event) => {
+  console.log('begin connection')
+  displayMessage('system', 'websocket', 'connected')
+  console.log("I am connected")
+}
+
+socket.onmessage = async (event) => {
+  const text = await event.data.text();
+  const data = JSON.parse(text);
+  displayMessage('player', 'player', `${data.name} chose the ${data.direction} option on question ${data.questionNumber}`)
+}
+
+function sendMessage(direction, questionNumber) {
+  const package = {
+    name: userName,
+    direction: direction,
+    questionNumber: questionNumber
+  }
+  console.log(package)
+  console.log(JSON.stringify(package))
+  socket.send(JSON.stringify(package))
+}
+
+socket.onclose = (event) => {
+  displayMessage('system', 'websocket', 'disconnected');
+}
+
+function displayMessage( cls, from , msg) {
+  const chatText = document.querySelector('#player-messages')
+  chatText.innerHTML = `<div>${msg}</div>` + chatText.innerHTML;
+}
+
 let activeQuestion = 1;
 let questionData = [
   { questionNumber: 1,
@@ -70,7 +109,8 @@ function updateQuestionDataFromStorage(questionDataToFill) {
 
 function recordResponse(direction, questionNumber) {
   console.log(direction, questionNumber);
-
+  // broadcast event
+  sendMessage(direction, questionNumber);
   //send response to local database and general database
   updateGlobal(direction, questionNumber);
   //set Data
@@ -165,3 +205,5 @@ function displayData() {
 }
 
 getResponsesFromService();
+
+
