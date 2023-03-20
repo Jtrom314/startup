@@ -55,6 +55,9 @@ Notes on Simon: Services
   
 Notes on Simon: Websocket
 I learned what it means to Ping/Pong between the server and client. It was cool to see what that looked like (while debugging it) and what it looked like on the front end of things
+
+Notes on Startup: Services
+I think the biggest thing that I learned was how to debug things that happen over the network. I learned about endpoints and their uses to interact with the backend of a server and what it does to data being sent. I learned about headers and different network protocals that the server uses to move data along.
  
 
 #Devin Sheldon's Notes
