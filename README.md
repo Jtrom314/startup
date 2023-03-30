@@ -59,6 +59,5 @@ I learned what it means to Ping/Pong between the server and client. It was cool 
 Notes on Startup: Services
 I think the biggest thing that I learned was how to debug things that happen over the network. I learned about endpoints and their uses to interact with the backend of a server and what it does to data being sent. I learned about headers and different network protocals that the server uses to move data along.
  
-
-#Devin Sheldon's Notes
-#   I learned that a good way to avoid merge conflicts is to work on separate files at the same time.
+Notes on React: Simon
+I was able to piece together how react "works" meaning how different componets are made, stored, and used within the main file. I think it will still take me some time to be able to be totally comfortable with react but I think that I can at least get started with my startup application
