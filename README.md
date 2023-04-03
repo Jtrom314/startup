@@ -1,63 +1,70 @@
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# HELLO VsCode
-# Hello Github1
-# Hello Github2
-# It is so cool to be able to change things on my computer and have 
-# them be published to the cloud. I learned how to save, commmit, 
-# pull, and resolve conflicts.
+## Available Scripts
 
-# ELEVATOR PITCH:
-# Have you ever wondered what other people thought about something? 
-# Have you ever wanted to know how your opinions stack up against git
-# everyone else's? Well, now you can know! We have created a site
-# called y/n.io that normal people like you and me can vote
-# on several hot-button topcis and see what percentage of people
-# made the same choice! Some opinions will be popular, while other
-# topics will be a controversial 50/50 split! Wheter you are 
-# mainstream or unique, you opinion counts!
+In the project directory, you can run:
 
-#  Key Features:
-#   * Secure login over HTTPS
-#   * Ability to choose "This or That"
-#   * Display choices in dynamic pie chart
-#   * Results are persistently stored
-#   * Ablitiy for admin to create prompts
-# END
+### `npm start`
 
-# Devin Sheldon and Jacob Trader are pair-programming this assignment.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Jacob Trader's Notes on Simon: HTML
-#   While doing this assignment, I thought alot about the meta tag in the head section of the html page
-#   I also found it interesting how you used tables to display infomration. I can't wait to learn how to update them dynamically
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-#Notes on Simon: CSS
-#   It was cool to see how much the website changed with just a little bit of bootstrap
+### `npm test`
 
-#Notes on Simon: JS
-#   It was interesting to see asyc in action. I am still a bit hazy on what it does exactly but this gave me a little bit more understanding for what it does
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Notes on Startup JS:
-Had a fun time working with objects and async functions. It was fun trying to figure out a solution to storing user response locally in a way that made sense to me while also looking out for what is to come in the future with data bases and other services.
+### `npm run build`
 
-Notes on Simon: Services
-  I learned that it is possilble to use outside data not already stored within the files of the project and display it within the website. I can't wait to use this ablitiy within my own website
- 
- Notes on Simon: Database
-  I learned that it is important to make sure you set up the database correctly to allow for IP address from anywhere to access it (when that is required)
-    I also learned how objects are stored inside the database and how to use queries to call for data
- 
- Notes on Simon: Log-in
-  I leaned how important it is to make sure all of the approprate npm modules are to installing. I also learned more about what async and await (specifically what they do and don't do) 
-  
-  Notes on Startup:
-    I learned that it is really good to plan things well in advance if I can. I also learned that it isn't a bad idea to throw in an extra div or two in areas that might need work done in the future (targeting for js, css etc). 
-  
-Notes on Simon: Websocket
-I learned what it means to Ping/Pong between the server and client. It was cool to see what that looked like (while debugging it) and what it looked like on the front end of things
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Notes on Startup: Services
-I think the biggest thing that I learned was how to debug things that happen over the network. I learned about endpoints and their uses to interact with the backend of a server and what it does to data being sent. I learned about headers and different network protocals that the server uses to move data along.
- 
-Notes on React: Simon
-I was able to piece together how react "works" meaning how different componets are made, stored, and used within the main file. I think it will still take me some time to be able to be totally comfortable with react but I think that I can at least get started with my startup application
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
