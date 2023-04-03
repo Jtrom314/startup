@@ -1,7 +1,34 @@
 import logo from './logo.svg';
+import React from 'react';
+
+import { NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
+
+import { AuthState } from './login/authState'; // ADD THIS TO NOTES
 import './App.css';
 
 function App() {
+  const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+  const [authState, setAuthstate] = React.useState(AuthState.Unknown);
+  React.useEffect(() => {
+    if (userName) {
+      fetch(`/api/user/${userName}`)
+      .then((response) => {
+        if (response.status === 200) {
+          return response.json();
+        }
+      })
+      .then((user) => {
+        const state = user?.authenticated ? AuthState.Authenticated : AuthState.Unauthenticated;
+        setAuthstate(state);
+
+      });
+      
+    } else {
+      setAuthstate(AuthState.Unauthenticated);
+    }
+  }, [userName]);
+
   return (
     <div className="App">
       <header>
@@ -16,6 +43,24 @@ function App() {
         />
       </span>
       </header>
+
+      <Routes>
+        <Route
+          path='/'
+          element = {
+            <Login
+              userName={userName}
+              authState={authState}
+              onAuthChange={(userName, authState) => {
+                setAuthstate(authState);
+                setUserName(userName);
+              }}
+              />
+          }
+          exact
+          />
+        <Route path='/vote' element={<Vote />} />
+      </Routes>
 
       <footer>
       <h5>Created by Jacob Trader</h5>
