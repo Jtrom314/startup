@@ -9,7 +9,7 @@ export function Login({ userName, authState, onAuthChange }) {
         <div>
         <section></section>
         <section>
-        <div style="text-align: center">
+        <div>
             <div>
                 {authState !== AuthState.Unknown && <h3>Log in to vote!</h3>}
                 {authState === AuthState.Authenticated && (

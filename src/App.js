@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import React from 'react';
 
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
+import { Vote } from './vote/vote';
 
 import { AuthState } from './login/authState'; // ADD THIS TO NOTES
 import './App.css';
