@@ -1,6 +1,7 @@
 import React from 'react'
 import { Question } from './question'
 import { Notification } from './websocket';
+import { Players } from './eventData';
 
 
 const userName = React.useState(localStorage.getItem('userName'))
@@ -69,7 +70,9 @@ function updateQuestionDataFromStorage(questionDataToFill) {
 
 export function Vote () {
     <>
-        <section id="player-messages"></section>
+        <section>
+            <Players />
+        </section>
         <section>
             { activeQuestion === 1 && (<Question questionPackage={questionData[0]}></Question>)}
             { activeQuestion === 2 && (<Question questionPackage={questionData[1]}></Question>)}
