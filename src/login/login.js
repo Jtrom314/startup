@@ -5,13 +5,15 @@ import { Authenticated } from './authenticated';
 import { AuthState } from './authState';
 
 export function Login({ userName, authState, onAuthChange }) {
+    console.log(authState !== AuthState.Unknown)
+    console.log(authState)
     return (
-        <div>
+        <>
         <section></section>
         <section>
         <div>
             <div>
-                {authState !== AuthState.Unknown && <h3>Log in to vote!</h3>}
+                {authState !== AuthState.Unknown && (<h3>Log in to vote!</h3>)}
                 {authState === AuthState.Authenticated && (
                     <Authenticated userName= {userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />
                 )}
@@ -28,6 +30,6 @@ export function Login({ userName, authState, onAuthChange }) {
         </div>
         </section>
         <section></section>
-        </div>
+        </>
     );
 }

@@ -4,7 +4,6 @@ import { Notification } from './websocket';
 import { Players } from './eventData';
 
 
-const userName = React.useState(localStorage.getItem('userName'))
 const maxNumberOfQuestions = 3;
 
 
@@ -68,10 +67,12 @@ function updateQuestionDataFromStorage(questionDataToFill) {
     }
   }
 
-export function Vote () {
+export function Vote ({userName}) {
+  console.log(questionData[0])
+    return (
     <>
         <section>
-            <Players />
+            <Players userName={userName} />
         </section>
         <section>
             { activeQuestion === 1 && (<Question questionPackage={questionData[0]}></Question>)}
@@ -80,4 +81,5 @@ export function Vote () {
         </section>
         <section></section>
     </>
+    )
 }

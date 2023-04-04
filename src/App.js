@@ -60,7 +60,7 @@ function App() {
           }
           exact
           />
-        <Route path='/vote' element={<Vote />} />
+        <Route path='/vote' element={<Vote userName={userName}/>} />
       </Routes>
 
       <footer>
