@@ -1,71 +1,77 @@
 
 import React from 'react'
+import { useState } from 'react'
 
 
-/*
-          <div id="question2Wrapper" class="questionWrap">
-            <div id="prompt2" class="prompt">
-              <h1>Pineapple on pizza?</h1>
-            </div>
-            <div class="spacer"></div>
-            <div id="changeBoard2">
-              <div id="optionWrapper2" class="optionWrapper">
-                <div id="prompt2Left" class="leftBTN" onclick="recordResponse('Left', 2)">Yeah!</div>
-                <div id="prompt2Right" class="rightBTN" onclick="recordResponse('Right', 2)">NO!</div>
-              </div>
-              <div id="chart2Wrapper" class="chartWrapper">
-                <p>
-                  <span id="left2Response" class="LeftResponse">25%</span> Voted
-                  for Yeah!
-                </p>
-                <p>
-                  <span id="right2Response" class="RightResponse">75%</span>
-                  Voted for NO!
-                </p>
-                <button class="button" onclick="showNextQuestion()">
-                  NEXT
-                </button>
-              </div>
-            </div>
-          </div>
 
-*/
-function recordResponse(direction, questionNumber) {
-    console.log(direction, questionNumber);
-    // broadcast event
-    //sendMessage(direction, questionNumber);
-    //send response to local database and general database
-    //updateGlobal(direction, questionNumber);
-    //set Data
-    //setNewData(direction, questionNumber);
-    //display Data
-    //displayData();
-    //hideChoicesAndShowResults();
-  }
 
-export function Question({ questionData }) {
-
+export function Question({ childToParent1, childToParent2, questionPackage }) {
+    const [hasAnswered, setHasAnswered] = useState(false)
+    const childToParent3 = () => {
+        setHasAnswered(!hasAnswered);
+    }
+    const [resultObject, setResult] = useState('')
+    const childToParent4 = (results) => {
+        setResult(results)
+    }
     return (
         <>
         <div className="questionWrap">
             <div className="prompt">
-                <h1>${questionData.questionTitle}</h1>
+                <h1>{questionPackage.questionTitle}</h1>
             </div>
             <div className="spacer"></div>
-            {questionData.answered === false && (<QuestionButtons leftQuestion={questionData.leftQuestion} rightQuestion={questionData.rightQuestion} questionNumber={questionData.questionNumber}/>)}
+            {!hasAnswered && (<QuestionButtons childToParent4={childToParent4} childToParent3={childToParent3}leftQuestion={questionPackage.questionLeft} rightQuestion={questionPackage.questionRight} questionNumber={questionPackage.questionNumber}/>)}
+            {hasAnswered && (<Results childToParent1={childToParent1} childToParent2={childToParent2} questionInfo={questionPackage} resultObject={resultObject}/>)}
         </div>
         </>
     )
 }
 
-function QuestionButtons({ leftQuestion, rightQuestion, questionNumber}) {
+function QuestionButtons({ childToParent4, childToParent3, leftQuestion, rightQuestion, questionNumber}) {
+    console.log(leftQuestion)
+    console.log(rightQuestion)
+
+    let leftPackage = {
+      response: 'left',
+      qNumber: questionNumber,
+      answered: true
+    }
+
+    let rightPackage = {
+      response: 'right',
+      qNumber: questionNumber,
+      answered: true
+    }
+
 
     return (
         <>
         <div className="optionWrapper">
-            <div className="leftBTN" onClick={ () => recordResponse('left', questionNumber)}>${leftQuestion}</div>
-            <div className="RightBTN" onClick={ () => recordResponse('right', questionNumber)}>${rightQuestion}</div>
+            <div className="leftBTN" onClick={ () => {childToParent4(leftPackage); childToParent3()} }>{leftQuestion}</div>
+            <div className="rightBTN" onClick={ () => {childToParent4(rightPackage); childToParent3()}}>{rightQuestion}</div>
         </div>
         </>
     )
+}
+
+function Results ({childToParent1, childToParent2, questionInfo, resultObject}) {
+  let leftResult, rightResult = 0;
+  if (resultObject.response === 'left') {
+   leftResult = (questionInfo.leftResponses + 1) / (questionInfo.totalResponses + 1)
+   rightResult = questionInfo.rightResponses / (questionInfo.totalResponses + 1)
+  } else {
+    leftResult = questionInfo.leftResponses / (questionInfo.totalResponses + 1)
+    rightResult = (questionInfo.rightResponses + 1) / (questionInfo.totalResponses + 1)
+  }
+
+  return (
+    <>
+    <div className='chartWrapper'>
+      <p><span className="LeftResponse">{leftResult} %</span>Voted for {questionInfo.leftQuestion}</p>
+      <p><span className="RightResponse">{rightResult} %</span> Voted for {questionInfo.rightQuestion}</p>
+      <button className="button" onClick={()=> {childToParent1(resultObject); childToParent2()}}>NEXT</button>
+    </div>
+    </>
+  )
 }
