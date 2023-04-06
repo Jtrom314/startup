@@ -139,7 +139,8 @@ function Vote ({userName}) {
   const QUESTION_STATE = {
     question1: 1,
     question2: 2,
-    question3: 3
+    question3: 3,
+    question4: 4
   }
 const [currentQuestion, setCurrentQuestion] = useState(QUESTION_STATE.question1)
     const childToParent1 = (childData) => {
@@ -155,6 +156,8 @@ const [currentQuestion, setCurrentQuestion] = useState(QUESTION_STATE.question1)
           setCurrentQuestion( QUESTION_STATE.question2)
         } else if (currentQuestion === 2) {
           setCurrentQuestion(QUESTION_STATE.question3)
+        } else if (currentQuestion === 3) {
+          setCurrentQuestion(QUESTION_STATE.question4)
         }
       }
     return (
@@ -166,6 +169,7 @@ const [currentQuestion, setCurrentQuestion] = useState(QUESTION_STATE.question1)
             { currentQuestion === 1 && (<Question childToParent1={childToParent1} childToParent2={childToParent2} questionPackage={questionData[0]}></Question>)}
             { currentQuestion === 2 && (<Question childToParent1={childToParent1} childToParent2={childToParent2} questionPackage={questionData[1]}></Question>)}
             { currentQuestion === 3 && (<Question childToParent1={childToParent1} childToParent2={childToParent2} questionPackage={questionData[2]}></Question>)}
+            { currentQuestion === 4 && ( <h1>Thanks for Voting!</h1>)}
         </section>
         <section></section>
     </>

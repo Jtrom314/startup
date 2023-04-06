@@ -44,7 +44,7 @@ function App() {
         />
       </span>
       </header>
-      <body>
+      <main>
       <Routes>
         <Route
           path='/'
@@ -62,12 +62,12 @@ function App() {
           />
         <Route path='/vote' element={<Vote userName={userName}/>} />
       </Routes>
-          </body>
+      </main>
       <footer>
       <h5>Created by Jacob Trader</h5>
       <h5><a href="https://github.com/Jtrom314/startup#startup">Github</a></h5>
       </footer>
-    </div>
+      </div>
   );
 }
 

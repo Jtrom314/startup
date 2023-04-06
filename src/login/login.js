@@ -8,11 +8,12 @@ export function Login({ userName, authState, onAuthChange }) {
     console.log(authState !== AuthState.Unknown)
     console.log(authState)
     return (
+        
         <>
         <section></section>
         <section>
         <div>
-            <div>
+            <div id='LoginCard'>
                 {authState !== AuthState.Unknown && (<h3>Log in to vote!</h3>)}
                 {authState === AuthState.Authenticated && (
                     <Authenticated userName= {userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />

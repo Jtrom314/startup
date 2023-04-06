@@ -9,7 +9,7 @@ html {
 body {
   /* body tag element (EVERYTHING) */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
