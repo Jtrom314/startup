@@ -5,14 +5,9 @@ import { Players } from './eventData';
 import { useState } from 'react'
 
 
-const maxNumberOfQuestions = 3;
 
 
-let activeQuestion = 1;
 
-function getCurrentQuestion() {
-  return activeQuestion
-}
 
 let questionData = [
   { 
@@ -30,9 +25,9 @@ let questionData = [
     leftResponses: 0,
     rightResponses: 0,
     totalRepsonses: 0,
-    questionTitle: "Question 2",
-    questionLeft: "Left",
-    questionRight: "Right",
+    questionTitle: "Tacos or Pizza",
+    questionLeft: "Tacos",
+    questionRight: "Pizzat",
     answered: false
   },
   {
@@ -40,17 +35,17 @@ let questionData = [
     leftResponses: 0,
     rightResponses: 0,
     totalRepsonses: 0,
-    questionTitle: "Question 3",
-    questionLeft: "Left",
-    questionRight: "Right",
+    questionTitle: "Football or Basketball",
+    questionLeft: "Football",
+    questionRight: "Basketball",
     answered: false
   }
 ];
 
-function recordResponse(direction, questionNumber, hasAnswered) {
+function recordResponse(direction, questionNumber, hasAnswered, userName) {
   console.log(direction, questionNumber, hasAnswered);
   // broadcast event
-  //sendMessage(direction, questionNumber);
+  sendMessage(direction, questionNumber, userName);
   //send response to local database and general database
   updateGlobal(direction, questionNumber, hasAnswered);
   //set Data
@@ -60,6 +55,9 @@ function recordResponse(direction, questionNumber, hasAnswered) {
   //hideChoicesAndShowResults();
 }
 
+function sendMessage(direction, questionNumber, userName) {
+  Notification.broadcastEvent('player','player',{msg: `${userName} chose the ${direction} response on question ${questionNumber}`})
+}
 
 async function updateGlobal(direction, questionNumber) {
   const userName = localStorage.getItem("userName");
@@ -148,7 +146,7 @@ const [currentQuestion, setCurrentQuestion] = useState(QUESTION_STATE.question1)
       let direction = childData.response
       let questionNumber = childData.qNumber
       let answer = childData.answered
-      recordResponse(direction, questionNumber, answer)
+      recordResponse(direction, questionNumber, answer, userName)
 
     }
     const childToParent2 = () => {
