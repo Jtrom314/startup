@@ -57,19 +57,25 @@ function QuestionButtons({ childToParent4, childToParent3, leftQuestion, rightQu
 
 function Results ({childToParent1, childToParent2, questionInfo, resultObject}) {
   let leftResult, rightResult = 0;
+  console.log(questionInfo.leftQuestion)
+  console.log(questionInfo.rightQuestion)
+  console.log(questionInfo.totalRepsonses)
   if (resultObject.response === 'left') {
-   leftResult = (questionInfo.leftResponses + 1) / (questionInfo.totalResponses + 1)
-   rightResult = questionInfo.rightResponses / (questionInfo.totalResponses + 1)
+   leftResult = (questionInfo.leftResponses + 1) / (questionInfo.totalRepsonses + 1) * 100
+   rightResult = questionInfo.rightResponses / (questionInfo.totalRepsonses + 1) * 100
+   
   } else {
-    leftResult = questionInfo.leftResponses / (questionInfo.totalResponses + 1)
-    rightResult = (questionInfo.rightResponses + 1) / (questionInfo.totalResponses + 1)
+    leftResult = questionInfo.leftResponses / (questionInfo.totalRepsonses + 1) * 100
+    rightResult = (questionInfo.rightResponses + 1) / (questionInfo.totalRepsonses + 1) * 100
   }
+  leftResult = leftResult.toFixed(2)
+   rightResult = rightResult.toFixed(2)
 
   return (
     <>
     <div className='chartWrapper'>
-      <p><span className="LeftResponse">{leftResult} %</span>Voted for {questionInfo.leftQuestion}</p>
-      <p><span className="RightResponse">{rightResult} %</span> Voted for {questionInfo.rightQuestion}</p>
+      <p><span className="LeftResponse">{leftResult}%</span> Voted for {questionInfo.questionRight}</p>
+      <p><span className="RightResponse">{rightResult}%</span> Voted for {questionInfo.questionLeft}</p>
       <button className="button" onClick={()=> {childToParent1(resultObject); childToParent2()}}>NEXT</button>
     </div>
     </>
