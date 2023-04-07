@@ -2,6 +2,7 @@ import React from 'react'
 import { Question } from './question'
 import { Notification } from './websocket';
 import { Players } from './eventData';
+import { VoteProgress } from './voteIndicator';
 import { useState } from 'react'
 
 
@@ -164,10 +165,32 @@ const [currentQuestion, setCurrentQuestion] = useState(QUESTION_STATE.question1)
             <Players userName={userName} />
         </section>
         <section>
+          <div>
+          <div className='questionWrapper'>
             { currentQuestion === 1 && (<Question childToParent1={childToParent1} childToParent2={childToParent2} questionPackage={questionData[0]}></Question>)}
             { currentQuestion === 2 && (<Question childToParent1={childToParent1} childToParent2={childToParent2} questionPackage={questionData[1]}></Question>)}
             { currentQuestion === 3 && (<Question childToParent1={childToParent1} childToParent2={childToParent2} questionPackage={questionData[2]}></Question>)}
+
             { currentQuestion === 4 && ( <h1>Thanks for Voting!</h1>)}
+          </div>
+
+            <div className='progressBarWrapper'>
+                { currentQuestion === 1 && (<VoteProgress boxNumber={1} isActive={true} />) }
+                { currentQuestion === 2 && (<VoteProgress boxNumber={1} isActive={false} />) }
+                { currentQuestion === 3 && (<VoteProgress boxNumber={1} isActive={false} />) }
+                
+
+                { currentQuestion === 1 && (<VoteProgress boxNumber={2} isActive={false} />) }
+                { currentQuestion === 2 && (<VoteProgress boxNumber={2} isActive={true} />) }
+                { currentQuestion === 3 && (<VoteProgress boxNumber={2} isActive={false} />) }
+                
+
+                { currentQuestion === 1 && (<VoteProgress boxNumber={3} isActive={false} />) }
+                { currentQuestion === 2 && (<VoteProgress boxNumber={3} isActive={false} />) }
+                { currentQuestion === 3 && (<VoteProgress boxNumber={3} isActive={true} />) }
+                
+            </div>
+            </div>
         </section>
         <section></section>
     </>

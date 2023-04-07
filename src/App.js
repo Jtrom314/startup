@@ -38,7 +38,7 @@ function App() {
       </span>
       <span id="logoDiv">
         <img
-          src="https://play-lh.googleusercontent.com/HnrIhQ3OLrboERhy6D-olqjQpZQLJYyW9Qz4MXvFcr87qGh91r5gJas2OuoYGJjmA26L=w240-h480-rw"
+          src="logo.png"
           width="75"
           alt="Yes or No logo"
         />
